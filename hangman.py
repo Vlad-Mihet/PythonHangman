@@ -21,6 +21,7 @@ def play():
             user_choice = input('Input a letter: ')
             if user_choice not in already_guessed:
                 if user_choice in word_letters:
+                    print('The letter you chose is right')
                     already_guessed.append(user_choice)
                     for i in range(len(random_word) - 1):
                         if word_letters[i] == user_choice:
@@ -44,5 +45,4 @@ def play():
         play()
     else:
         print('Have a good day!')
-
 play()
